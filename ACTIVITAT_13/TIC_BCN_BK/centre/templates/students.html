@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Centre Template</title>
+</head>
+<body>
+    <h4>Centre template</h4>
+    <p>Welcome to centre page</p>
+
+    <h2>Students</h2>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.nom }} {{ student.cognom1 }} {{ student.cognom2 }} - {{ student.curs }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
