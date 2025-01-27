@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Centre Template</title>
+    <title>Students</title>
 </head>
 <body>
-    <h4>Centre template</h4>
-    <p>Welcome to centre page</p>
-
-    <h2>Students</h2>
-    <ul>
-        {% for student in students %}
-        <li>{{ student.nom }} {{ student.cognom1 }} {{ student.cognom2 }} - {{ student.curs }}</li>
-        {% endfor %}
-    </ul>
+    <h1>Student List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname 1</th>
+                <th>Surname 2</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Module</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.surname1 }}</td>
+                <td>{{ student.surname2 }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.course }}</td>
+                <td>{{ student.module }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
