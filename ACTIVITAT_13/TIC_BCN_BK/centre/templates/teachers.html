@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+    <h4>Teacher template</h4>
+    <p>Welcome to Teacher's page</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Role</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                 <td>{{ teacher.id }}</td>
+                <td>{{ teacher.nom }}</td>
+                <td>{{ teacher.cognom }}</td>
+                <td>{{ teacher.edat }}</td>
+                <td>{{ teacher.rol }}</td>
+                <td>{{ teacher.curs }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 </body>
 </html>

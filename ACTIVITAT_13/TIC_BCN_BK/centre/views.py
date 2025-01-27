@@ -97,7 +97,7 @@ def students(request):
     return HttpResponse(dades)
 
 
-def teachers():
+def teachers(request):
     teachers_list = [
         {
             "id": 1,
