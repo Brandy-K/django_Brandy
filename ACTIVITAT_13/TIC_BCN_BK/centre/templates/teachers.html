@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Teachers</title>
-</head>
-<body>
-    <h4>Teacher Template</h4>
-    <p>Welcome to the Teacher's page</p>
 
+{% extends 'index.html' %}
+{%  block content %}
+
+    <h4>Teacher Template</h4>
     {% for teacher in teachers %}
-    <div style="margin-bottom: 20px; padding: 10px;">
+    <div>
         <label><strong>Id:</strong> {{ teacher.id }}</label><br>
         <label><strong>Name:</strong> {{ teacher.nom }}</label><br>
         <label><strong>Surname:</strong> {{ teacher.cognom }}</label><br>
@@ -17,6 +12,5 @@
         <label><strong>Role:</strong> {{ teacher.rol }}</label><br>
         <label><strong>Course:</strong> {{ teacher.curs }}</label><br>
     </div>
-    {% endfor %}
-</body>
-</html>
+{% endfor %}
+{% endblock %}

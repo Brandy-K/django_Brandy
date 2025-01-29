@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Students</title>
-</head>
-<body>
-    <h1>Student List</h1>
 
+     {% extends 'index.html' %}
+      {%  block content %}
+
+     <h1>Student List</h1>
     {% for student in students %}
-    <div style="margin-bottom: 20px; padding: 10px; ">
+    <div>
         <label><strong>Name:</strong> {{ student.name }}</label><br>
         <label><strong>Surname 1:</strong> {{ student.surname1 }}</label><br>
         <label><strong>Surname 2:</strong> {{ student.surname2 }}</label><br>
         <label><strong>Email:</strong> {{ student.email }}</label><br>
         <label><strong>Course:</strong> {{ student.course }}</label><br>
         <label><strong>Modules:</strong>{{ student.module }}</label>
-        <ul>
-            {% for module in student.module %}
-            <li>{{ module }}</li>
-            {% endfor %}
-        </ul>
+
     </div>
     {% endfor %}
-</body>
-</html>
+    {% endblock %}
+
