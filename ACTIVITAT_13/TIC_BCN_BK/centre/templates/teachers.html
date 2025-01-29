@@ -2,36 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Teachers</title>
 </head>
 <body>
-    <h4>Teacher template</h4>
-    <p>Welcome to Teacher's page</p>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Age</th>
-                <th>Role</th>
-                <th>Course</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for teacher in teachers %}
-            <tr>
-                 <td>{{ teacher.id }}</td>
-                <td>{{ teacher.nom }}</td>
-                <td>{{ teacher.cognom }}</td>
-                <td>{{ teacher.edat }}</td>
-                <td>{{ teacher.rol }}</td>
-                <td>{{ teacher.curs }}</td>
+    <h4>Teacher Template</h4>
+    <p>Welcome to the Teacher's page</p>
 
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
+    {% for teacher in teachers %}
+    <div style="margin-bottom: 20px; padding: 10px;">
+        <label><strong>Id:</strong> {{ teacher.id }}</label><br>
+        <label><strong>Name:</strong> {{ teacher.nom }}</label><br>
+        <label><strong>Surname:</strong> {{ teacher.cognom }}</label><br>
+        <label><strong>Age:</strong> {{ teacher.edat }}</label><br>
+        <label><strong>Role:</strong> {{ teacher.rol }}</label><br>
+        <label><strong>Course:</strong> {{ teacher.curs }}</label><br>
+    </div>
+    {% endfor %}
 </body>
 </html>
