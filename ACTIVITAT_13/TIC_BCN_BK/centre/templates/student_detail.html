@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Student Details</h1>
+
+<label><strong>Name:</strong> {{ student.name }}</label><br>
+<label><strong>Surname 1:</strong> {{ student.surname1 }}</label><br>
+<label><strong>Surname 2:</strong> {{ student.surname2 }}</label><br>
+<label><strong>Email:</strong> {{ student.email }}</label><br>
+<label><strong>Course:</strong> {{ student.course }}</label><br>
+<label><strong>Modules:</strong></label>
+<ul>
+    {% for module in student.module %}
+        <li>{{ module }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'students_list' %}">Back to Student List</a>
+
+{% endblock %}

@@ -5,14 +5,18 @@
      <h1>Student List</h1>
     {% for student in students %}
     <div>
-        <label><strong>Name:</strong> {{ student.name }}</label><br>
+        <label><strong>Name:</strong> {{ student.name }}</label>
+        <a href="{% url 'student_detail' student.id %}">info</a><br>
         <label><strong>Surname 1:</strong> {{ student.surname1 }}</label><br>
         <label><strong>Surname 2:</strong> {{ student.surname2 }}</label><br>
         <label><strong>Email:</strong> {{ student.email }}</label><br>
         <label><strong>Course:</strong> {{ student.course }}</label><br>
         <label><strong>Modules:</strong>{{ student.module }}</label>
 
+
+
     </div>
     {% endfor %}
+
     {% endblock %}
 
