@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pasApas.views import guardar_session, eliminar_sesion
+from pasApas.views import guardar_session, eliminar_session,recuperar_session
+
 
 urlpatterns = [
     path('guardar_session/', guardar_session, name='guardar_session'),
-    path('eliminar_sesion/', eliminar_sesion, name='eliminar_sesion'),
+    path('eliminar_session/', eliminar_session, name='eliminar_session'),
+    path('recuperar_session/', recuperar_session, name='recuperar_session')
 ]
 
