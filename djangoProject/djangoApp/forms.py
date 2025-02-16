@@ -1,8 +1,7 @@
-from django.forms import ModelForm
+from django import forms
 from .models import User
 
 
-class LoginForm(ModelForm):
-    class Meta:
-        model = User
-        fields = ['email', 'password']
+class LoginForm(forms.Form):
+    email = forms.EmailField(label="Email", max_length=100)
+    password = forms.CharField(widget=forms.PasswordInput, label="Password")
