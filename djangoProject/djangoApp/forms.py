@@ -1,11 +1,8 @@
-
 from django.forms import ModelForm
-from .models import Person
+from .models import User
 
 
-class PersonForm(ModelForm):
+class LoginForm(ModelForm):
     class Meta:
-        model = Person
-
-        fields = '__all__'
-
+        model = User
+        fields = ['email', 'password']
