@@ -13,3 +13,14 @@ Emmagatzema la ID de l'usuari a la sessió i manté la sessió fins al tancament
 
 ## funcionalitat de logout
  Neteja la sessió i redirigeix a la pàgina de login.
+
+# Migration Image
+
+![Migration Image](djangoProject/migration.png)
+
+La imatge següent conté el procés de migració al terminal
+
+# Users Image
+![Users Image](djangoProject/users.png)
+
+La imatge següent mostra els usuaris de la base de dades
